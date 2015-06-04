@@ -3,6 +3,7 @@ CFLAGS+=	-I../strfile -DFORTDIR=\"$(FORTDIR)\"
 LDFLAGS+=	-lbsd
 
 fortune : fortune.c
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS)
 
 install :
 	mkdir -p $(DESTDIR)$(PREFIX)/bin

@@ -1,6 +1,7 @@
 LDFLAGS+=	-lbsd
 
 strfile : strfile.c
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS)
 
 install :
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
