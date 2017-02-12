@@ -1,6 +1,6 @@
 PREFIX ?= /usr/local
 
-SUBDIRS = fortune strfile datfiles
+SUBDIRS = fortune strfile
 
 all :
 	for subdir in $(SUBDIRS); do $(MAKE) -C $$subdir PREFIX=$(PREFIX); done
