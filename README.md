@@ -1,8 +1,9 @@
 # fortune
 
-This code was torn directly out of OpenBSD 5.7's source package and modified
+This code was torn directly out of OpenBSD 5.7's source package ~~and modified
 to build on [Alpine Linux](http://alpinelinux.org) against
-[libbsd](http://libbsd.freedesktop.org) 0.7.0. Please see `LICENSE` for
+[libbsd](http://libbsd.freedesktop.org) 0.7.0.~~ modified to not rely on libbsd,
+and use arc4random from LibreSSL instead. Please see `LICENSE` for
 details.
 
 ## Differences
