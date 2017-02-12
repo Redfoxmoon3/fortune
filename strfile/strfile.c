@@ -438,7 +438,8 @@ randomize(void)
 	 */
 
 	for (sp = Seekpts; cnt > 0; cnt--, sp++) {
-		i = arc4random_uniform(cnt);
+		/* i = arc4random_uniform(cnt); */
+		i = arc4random() % cnt;
 		tmp = sp[0];
 		sp[0] = sp[i];
 		sp[i] = tmp;

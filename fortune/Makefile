@@ -1,6 +1,6 @@
-FORTDIR?=	$(PREFIX)/share/fortune
-CFLAGS+=	-I../strfile -DFORTDIR=\"$(FORTDIR)\"
-LDFLAGS+=	-lbsd
+FORTDIR?= /home/red/Desktop/fortune/datfiles
+CFLAGS+= -I../strfile -DFORTDIR=\"$(FORTDIR)\"
+LDFLAGS+= -lcrypto
 
 fortune : fortune.c
 	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS)

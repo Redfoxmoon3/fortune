@@ -1,4 +1,4 @@
-LDFLAGS+=	-lbsd
+LDFLAGS+= -lcrypto
 
 strfile : strfile.c
 	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS)
