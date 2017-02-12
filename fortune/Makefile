@@ -1,9 +1,10 @@
 FORTDIR?= /home/red/Desktop/fortune/datfiles
 CFLAGS+= -I../strfile -DFORTDIR=\"$(FORTDIR)\"
-LDFLAGS+= -lcrypto
+LDFLAGS+= 
+LIBS+= -lcrypto
 
 fortune : fortune.c
-	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS)
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) $(LIBS)
 
 install :
 	mkdir -p $(DESTDIR)$(PREFIX)/bin

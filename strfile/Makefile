@@ -1,7 +1,9 @@
-LDFLAGS+= -lcrypto
+LDFLAGS+= 
+LIBS+= -lcrypto
+CFLAGS+= -g3 -O0
 
 strfile : strfile.c
-	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS)
+	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) $(LIBS)
 
 install :
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
