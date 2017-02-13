@@ -12,9 +12,14 @@ The two C source files, `strfile.c` and `fortune.c`, have had
 `#include <sys/types.h>` added near the top of the file. Additionally, all of
 the `Makefile`s have been replaced to work with GNU Make.
 
-Notably, there is no option to disable "offensive" fortunes. Just erase the
+~~Notably, there is no option to disable "offensive" fortunes. Just erase the
 `fortune-o`, `fortune2-o`, and `limerick` files from the `datfiles` directory
-and remove the references from `datfiles/Makefile`.
+and remove the references from `datfiles/Makefile`.~~ invoke Makefile-o to
+get the "offensive" fortunes.
+
+## When cross compiling
+
+Invoke make in datfiles on the target to generate datafiles.
 
 ## Known Issues
 
