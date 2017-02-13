@@ -1,4 +1,4 @@
-SRCS = fortunes fortunes2 startrek zippy recipes
+SRCS = fortunes-o limerick fortunes2-o
 BLDS = $(addsuffix .dat,$(SRCS))
 
 STRFILE ?= ../strfile/strfile
@@ -9,7 +9,7 @@ install :
 	mkdir -p $(DESTDIR)$(PREFIX)/share/fortune
 	install -m0644 $(SRCS) $(BLDS) $(DESTDIR)$(PREFIX)/share/fortune/
 
-# Bug in strfile means we can't use -r. realloc call is wrong
+# Bug in strfile means we can't use -r, realloc call is wrong
 %.dat:%
 	$(STRFILE) $< $@
 
